@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { Label } from "@/components/ui/label";
 import { Cookie } from "lucide-react";
 
@@ -116,7 +116,7 @@ export default function GingerbreadMadLibs() {
   };
 
   const generateStory = () => {
-    let story = selectedStory.template;
+    const story = selectedStory.template;
     let wordIndex = 0;
     const sentences = story.split(/(?<=[.!?])\s+/);
 
